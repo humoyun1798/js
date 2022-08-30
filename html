@@ -1,0 +1,252 @@
+<!DOCTYPE html>  <!-- 告诉浏览器这是一个html文件 -->
+<html lang="en">  <!-- html文件的最外层标签：包裹这所有Html标签代码  lang=en 表示当前网页是一个英文网站 中文网站zh-CN-->
+<head>
+    <meta charset="UTF-8">  <!-- 元信息：是编写网页中的一些赋值信息 -->
+    <title>Document</title>  <!-- 设置网页标题 -->
+</head>
+<body>
+
+
+    <div>app</div>
+    <!-- <iframe  width="100%" height="600px" src="C:/Users/Administrator/Desktop/VSCode/tool/Google.html" ></iframe> -->
+    
+    <!-- ================================================ 1 1 1 ==================================================== -->
+    <div id="wrap">
+    <!-- 显示网页的内容的区域 -->
+    <h1>class属性转选择器</h1>
+        <textarea id="putclass" name="putclass" style="width: 300px; height: 100px;" placeholder="输入class"></textarea>
+        <input type="button" value="转换" id="btn" onclick="f()" style="bottom:50px; height: 40px;">
+        <textarea id="outclass" name="outclass" style="width: 300px; height: 100px;" placeholder="获得选择器"></textarea>
+    </div>
+    
+</br>
+    
+    <!-- ================================================ 2 2 2 ==================================================== -->
+    <a class="blance-bt" href="javascript:;"> 
+<div id="wrap">
+        <!-- 显示网页的内容的区域 -->
+        <h1>js判断正则表达式</h1>
+            <textarea id="putclass1" name="putclass1" style="width: 300px; height: 100px;" placeholder="字符串"></textarea>
+            <input  type="button" value="转换" id="btn1" onclick="a()" style="bottom:50px; height: 40px;">
+            <textarea id="outclass1" name="outclass1" style="width: 300px; height: 100px;" placeholder="正则表达式"></textarea>
+    </div>
+</a>
+</br>
+
+    <!-- ================================================ 3 3 3 ==================================================== -->
+
+        <!-- <div>
+            
+            <h1>js生成代码</h1>
+            <h3>fun(函数名，形参，if判断，if判断的内容，else的内容)</h3>
+            
+                <textarea id="putclass2" name="putclass2" style="width: 500px; height: 400px;" placeholder="">fun(函数名,形参,if判断,if判断的内容,else的内容)</textarea>
+                <input type="button" value="转换" id="btn2" onclick="b()">
+                <textarea id="outclass2" name="outclass2" style="width: 500px; height: 400px;" placeholder="异步函数"></textarea>
+        </div> -->
+
+            <div style="width:1065px; height:500px" id="wrap">
+                <!-- 显示网页的内容的区域 -->
+                <h1>js生成代码 2.0</h1>
+
+                <h3>cache:CDC:(CEFBG:)------初始化缓存</h3>
+                <h3>fun(函数名，形参，内容</h3>
+
+
+                <textarea id="putclass3" name="putclass3" style="width: 500px; height: 400px;" placeholder="cache:CDC:
+fun(name,abc,content"></textarea>
+                    <input type="button" value="转换" id="btn3" onclick="c()" style="bottom:200px; height: 40px;">
+                <textarea id="outclass3" name="outclass3" style="width: 500px; height: 400px;" placeholder="异步函数"></textarea>
+            </div>
+
+
+    <!-- ================================================ 1 1 1 ==================================================== -->
+
+<!-- 变色awa，不知道为啥 -->
+    <a class="blance-bt" href="javascript:;"> 
+
+    <div id="wrap">
+    <!-- 显示网页的内容的区域 -->
+    <h1>标签转选择器</h1>
+        <textarea id="putclass4" name="putclass4" style="width: 300px; height: 100px;" placeholder="输入class"></textarea>
+        <input type="button" value="转换" id="btn4" onclick="f2()" style="bottom:50px; height: 40px;">
+        <textarea id="outclass4" name="outclass4" style="width: 300px; height: 100px;" placeholder="获得选择器"></textarea>
+    </div>
+    </a>
+</br>
+
+
+ 
+
+        <!-- Easy  -->
+        <link rel="stylesheet" type="text/css" href="easyui/themes/default/easyui.css">
+        <link rel="stylesheet" type="text/css" href="easyui/themes/icon.css">
+        <script type="text/javascript" src="easyui/jquery.min.js">
+        </script>
+        <script type="text/javascript" src="easyui/jquery.easyui.min.js">
+        </script>
+
+
+            <!-- 网页翻译 -->
+            <!-- <div id="cn">
+
+                
+            <h3>中文翻译成别的<h3>
+                <div id="google_translate_element"></div>
+
+            </div> -->
+    <!-- <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({pageLanguage: 'zh-CN'}, 'google_translate_element');
+        }
+    </script>
+    <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+ -->
+
+
+
+
+
+
+
+                
+<script src="https://static.ws.126.net/utf8/assets/js/jquery-1.10.2.min.js"></script>
+<script>
+
+    function f(){
+        str=$("#putclass").val()
+        str = str.replace(/ /g,".");
+        $("#outclass").val("$j('."+str+"')")
+    }
+    function getCharCount(str,char){
+            
+        const content = str.split('');
+        let count= 0;
+        for(let i=0;i<str.length;i++){
+            if(content[i]==char){
+                    count++
+            }
+        }
+        return count;
+    }
+
+    function f2(){
+            str=$("#putclass4").val()//<a class="blance-bt" href="javascript:;">
+            str= str.split('<')[1]//a class="blance-bt" href="javascript:;">
+            str_1 = str.split(' ')[0];//a
+            // str2 = str.split(' ')[1];//class="blance-bt" href="javascript:;">
+            str_3=""
+            a=str.indexOf(" ")//第一个" "(空格)的位置
+            str2=str.substring(a + 1)//" "下一个字符的位置 a+1
+            const content = str.split('');//str字符串转数组 content[]
+            var count= 0;
+            for(let i=0;i<str.length;i++){
+                if(content[i]==" "){
+                    count++ 
+                }
+            }
+            // str_3=str_3+"["+str2.split(' ')[0]+"]";//class="blance-bt"
+            // str2=str2.split(' ')[1];//href="javascript:;">
+            
+            str_3=""
+            for(var i=0;i<count-1;i++){
+                console.log(i+str_3)
+                str_3=str_3+"["+str2.split(' ')[i]+"]";
+                
+            }
+            str2=str.split(' ')[count];
+            str_4=str2.split('>')[0]
+
+            $("#outclass4").val("$j('"+str_1+str_3+"["+str_4+"]"+"')")
+
+            // $("#outclass4").val("$j('"+str_1+"["+str_3+"]"+"["+str_4+"]"+"')")
+    }
+
+    function a(){
+            str=$("#putclass1").val()
+            regex=$("#outclass1").val()
+            alert(regex.exec(str))
+    }
+
+    function b(){
+            strx=""
+            str=$("#putclass2").val().split('fun(')
+            for(var i=1;i<str.length;i++){
+                str[i].split(',')
+                str1=str[i].split(',')[0]
+                str2=str[i].split(',')[1]
+                str3=str[i].split(',')[2]
+                str4=str[i].split(',')[3]
+                str5=str[i].split(',')[4].split(')')[0]
+                if(str3==''){
+
+                }else{
+                    str3='if('+str3+')'+'{\n'+str4+'\n}else{\n'+str5+'\n}'
+                }
+                strx=strx+'async function '+str1+'('+str2+'){'+'\n'+str3+'\n}'+'\n\n'
+                
+                
+            }
+            $("#outclass2").val(strx)
+    }
+        
+    function c(){
+            cefbg=$("#putclass3").val().split('cache:')
+            strche=''
+            for(var j=1;j<cefbg.length;j++){
+                strc=cefbg[j].split(';')[0]
+                if(strc.indexOf("CEFBG")>-1){
+                    strc=strc.split('CEFBG:')[1]
+
+                    strc="if (CEFBG.getValue('"+strc+"') == null || CEFBG.getValue('"+strc+"') == ''){CEFBG.setValue('"+strc+"', '');}\n\n"
+
+                }else if(strc.indexOf("CDC")>-1){
+                    strc=strc.split('CDC:')[1]
+
+                    strc="if (CDC.getCache('"+strc+"') == null || CDC.getCache('"+strc+"') == '') {CDC.setCache('"+strc+"', '');}\n\n"
+
+                }
+                strche=strche+strc
+            }
+
+            strx="$j(document).ready(function () {\n\n}\n\n"
+            str=$("#putclass3").val().split('fun(')
+            for(var i=1;i<str.length;i++){
+                str[i].split(',')
+                str1=str[i].split(',')[0]
+                str2=str[i].split(',')[1]
+                str3=str[i].split(',')[2]
+
+                strx=strx+'async function '+str1+'('+str2+'){'+'\n'+str3+'\n}'+'\n\n'
+                
+            }
+
+            result=strche+strx
+            $("#outclass3").val(result)
+    }
+
+</script>
+<style>
+
+    #wrap {
+        position: relative;  /* 或者 position: absolute; 设置div为相对或者绝对定位*/ 
+        display: inline-block;
+    }
+    
+    input {
+        position: relative;
+        box-shadow: 5px 5px 10px #888888;
+
+    }        
+
+    textarea{
+        box-shadow: 5px 5px 9px #888888;
+        border-radius:6px;
+
+    }
+
+</style>
+
+</body>
+
+</html>
